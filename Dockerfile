@@ -6,12 +6,12 @@ USER root
 
 COPY requirements.txt /requirements.txt
 
-RUN pip install -r requirements.txt
+RUN pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 
 COPY docker-entrypoint.sh /docker-entrypoint.sh
 
 RUN chmod 777 /docker-entrypoint.sh
 
-EXPOSE 8000
+EXPOSE 5000
 
 ENTRYPOINT ./docker-entrypoint.sh
