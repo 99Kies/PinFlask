@@ -19,7 +19,7 @@ class NameForm1(FlaskForm):
     submit = SubmitField("提交")
 
 def waf(str):
-    black_list = ['flag','os','system','popen','import','eval','chr','request','subprocess','commands','socket','hex','base64',"_","__","[","]"]
+    black_list = ['flag','os','system','popen','import','eval','chr','request','subprocess','commands','socket','hex','base64']
     for x in black_list :
         if x in str.lower() :
             return 1
