@@ -8,7 +8,7 @@ COPY _flag_xxxxxxx_.txt /_flag_xxxxxxx_.txt
 
 COPY requirements.txt /requirements.txt
 
-RUN pip install -r requirements.txt
+RUN pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 
 COPY docker-entrypoint.sh /docker-entrypoint.sh
 
